@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Firmas Alva</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+
+	<style type="text/css">
+		body {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		h1, h3 {
+		   text-align: center;
+		}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}
+
+a.btn  {
+    color: #fff;
+    background-color: #007bff !important;
+    border-color: #007bff;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+	</style>
+</head>
+<body>
+
+	<header>
+		  
+		<div class="jumbotron">	
+
+		    	<h1>Alva | ReAcción | Empathy</h1>
+                <h3>Pie de mail </h3>
+            	<br />
+            	<div style="display:flex; width: 30%; margin: 0 35%;">
+            	<div class="formulario" style="text-align: left;">
+                <form>
+		            <label for="selector">Nombre</label>
+		            <select id="selector" name="Nombres" width="200">
+			            <option value="mariale">Mariale Ariceta</option>
+			            <option value="mariana">Ing. Mariana Robano</option>
+			            <option value="sofi_k">Sofía Khayat</option>
+			            <option value="chony">Andrés Ramírez</option>
+			            <option value="fer">Mag. Fernanda Ariceta</option>
+			            <option value="cami">Lic. Camila Mutuberría</option>
+			            <option value="flo">Lic. Florencia Braglia</option>
+			            <option value="gon">Mag. Gonzalo López Baliñas</option>
+			            <option value="ema">Emanuel Espinel</option>
+			            <option value="sofi_v">Lic. Sofía Vázquez</option>
+			            <option value="seba">Sebastián Sacías</option>
+			            <option value="rodri">Lic. Rodrigo Camy</option>
+			            <option value="mica">Micaela Clavijo</option>
+			            <option value="romy">Romy Pawlak</option>
+			            <option value="marina">Marina Quevedo</option>
+			            <option value="tomi">Gastón Thomas</option>
+			            <option value="agus">Agustina González</option>
+			            <option value="vale">Valentina Bardanca</option>
+			            <option value="moi">Moira Shaw</option>
+		            </select>
+		            <br><br>
+		            <label for="celular">Ingresá tu celular: </label>
+		            <input type="text" name="celular" id="celular" placeholder="094 311 584" />
+
+
+		            <br /><br />
+                        <a onclick="creadorFirma()" name="Enviar" class="btn">Generar</a>
+                        <a onclick="location.reload();" name="Reset" class="btn" style="background-color: #EA3546 !important">Reset</a>
+	            </form>          
+	            </div>
+	            </div>
+
+         </div>
+
+	</header>
+ 
+    <main>
+
+
+    	<br><br>
+    	
+       <div class="alva" style="width: 50%; margin: 0 25%;" id="nodealva">
+    
+
+    <div id="contenedoralva">  	
+<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px;background:#A8822E;">
+	<tbody>
+		<tr width="100%">
+
+            <td width="200px">
+            	
+            	<img src="https://images.squarespace-cdn.com/content/557b47e0e4b097936a814d74/1587416948231-3E39LNV6UNRP6VMQJ2W0/alva-logo.png" width="100%" />
+
+            </td>
+
+            <td width="">	
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="background:#A8822E;font-size:0px;font-family:'Tahoma'; padding: 25px;">
+	<tbody>
+
+		<tr width="100%">
+
+            <td width="180px">
+
+                <tr>
+                	<td height="10px"><font color="#ffffff" face="Tahoma"><span style="font-size:18px;line-height:18px;font-weight: 700;" id="nombre_alva">Nombre Apellido</span></font>
+                	</td>
+                </tr>
+
+                <tr>
+                	<td height="13px"><font color="#ffffff" face="Tahoma"><span style="font-size:10px;line-height:20px;font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;" id="cargo_alva">Cargo</span></font>
+                	</td>
+                </tr>
+
+				<tr>
+					<td height="9px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:9px;font-weight: 400;">&nbsp;</div>
+					</td>
+				</tr>
+                <tr>
+					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:12px;">Home Office</span>
+					</td>               	
+
+                </tr>
+				<tr>
+					<td height="10px"><a href="tel:0059894311584" class="cel_enlace" target="_blank" style="text-decoration:none;color:#ffffff;"><span style="color:#ffffff;font-family:Tahoma;font-size:10px;line-height:12px;font-weight: 400;"><span style="font-weight: 900;font-size: 9px;">Contacto</span>&nbsp;(+598)&nbsp;<span id="cel_alva">094 311 584</span></span></a>
+					</td>
+
+				</tr>
+     			<tr>
+					<td height="14px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:14px;font-weight: 400;">&nbsp;</div>
+					</td>
+				</tr>
+
+			    <tr>
+			    	<td height="13px">
+
+			    		<a href="https://alva.com.uy" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Web&nbsp;|&nbsp;
+			    		    </span>
+			    		</a>
+			    		<a href="https://www.linkedin.com/company/alva-creative-house/" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Linkedin&nbsp;|&nbsp;
+			    		    </span>
+			    		</a>
+			    		<a href="https://alva.com.uy/portfolio" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Últimos trabajos
+			    		    </span>
+			    		</a>
+
+			    	</td>
+
+
+     		    </tr>
+
+
+            </td>
+  
+        </tr>
+
+    </tbody>
+
+</table>
+
+</td>
+
+
+</tr>
+</tbody>
+</table>
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px">
+	<tbody>
+		<tr width="100%">
+            <td width="180px">
+            	<span style="color:#333333;font-family:Tahoma;font-weight: 700;font-size: 8.7px; line-height:12px;">Alva es una empresa comprometida con los Principios de Empoderamiento
+de las Mujeres.<br/>
+El contenido de este correo es confidencial y privado. Evitá
+imprimirlo, asegurate de reutilizar o reciclar el papel para minimizar
+su impacto.
+               </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div> 
+<br>
+                        <a onclick="copiarFirma('alva')" name="Enviar" class="btn">Copiar</a>
+    	<br><br>  
+
+       </div>
+
+  
+
+    	<!-- ReAcción --> 
+
+       <div class="reaccion" style="width: 50%; margin: 0 25%;" id="nodereaccion">
+ 
+    <div id="contenedorreaccion"> 
+<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px;background:#5FBA4F;">
+	<tbody>
+		<tr width="100%">
+
+            <td width="200px">
+            	
+            	<img src="https://static1.squarespace.com/static/557b47e0e4b097936a814d74/t/5e9e0fee0e733561f35c9d63/1587417071966/reaccion-logo.png" width="100%" />
+
+            </td>
+
+            <td width="">	
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="background:#5FBA4F;font-size:0px;font-family:'Tahoma'; padding: 25px;">
+	<tbody>
+
+		<tr width="100%">
+
+            <td width="180px">
+
+                <tr>
+                	<td height="10px"><font color="#ffffff" face="Tahoma"><span style="font-size:18px;line-height:18px;font-weight: 700;" id="nombre_reaccion">Nombre Apellido</span></font>
+                	</td>
+                </tr>
+
+                <tr>
+                	<td height="13px"><font color="#ffffff" face="Tahoma"><span style="font-size:10px;line-height:20px;font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;" id="cargo_reaccion">Cargo</span></font>
+                	</td>
+                </tr>
+
+				<tr>
+					<td height="9px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:9px;font-weight: 400;">&nbsp;</div>
+					</td>
+				</tr>
+                <tr>
+					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:12px;">Home Office</span>
+					</td>               	
+
+                </tr>
+				<tr>
+					<td height="10px"><a href="tel:0059894311584" class="cel_enlace" target="_blank" style="text-decoration:none;color:#ffffff;"><span style="color:#ffffff;font-family:Tahoma;font-size:10px;line-height:12px;font-weight: 400;"><span style="font-weight: 900;font-size: 9px;">Contacto</span>&nbsp;(+598)&nbsp;<span id="cel_reaccion">094 311 584</span></span></a>
+					</td>
+
+				</tr>
+     			<tr>
+					<td height="14px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:14px;font-weight: 400;">&nbsp;</div>
+					</td>
+				</tr>
+
+			    <tr>
+			    	<td height="13px">
+
+			    		<a href="https://www.reaccion.com.uy" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Web&nbsp;|&nbsp;
+			    		    </span>
+			    		</a>
+			    		<a href="https://www.linkedin.com/company/reaccion-latam/" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Linkedin&nbsp;|&nbsp;
+			    		    </span>
+			    		</a>
+			    		<a href="https://www.reaccion.com.uy" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Últimos trabajos
+			    		    </span>
+			    		</a>
+
+			    	</td>
+
+
+     		    </tr>
+
+
+            </td>
+  
+        </tr>
+
+    </tbody>
+
+</table>
+
+</td>
+
+
+</tr>
+</tbody>
+</table>
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px">
+	<tbody>
+		<tr width="100%">
+            <td width="180px">
+            	<span style="color:#333333;font-family:Tahoma;font-weight: 700;font-size: 8.7px; line-height:12px;">El contenido de este correo es confidencial y privado. Evitá
+imprimirlo. Asegurate de reutilizar o reciclar el papel para minimizar
+su impacto. Consultá cómo podés incorporar mejores prácticas 
+<a href="https://www.reaccion.com.uy" target="_blank" style="color:#5FBA4F;font-size:10px;line-height:14px;font-weight: 400;">
+    <span style="color:#5FBA4F;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">acá. </span></a>
+
+               </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+<br>
+                        <a onclick="copiarFirma('reaccion')" name="Enviar" class="btn">Copiar</a>
+    	<br><br>  
+
+       </div>
+
+
+       <!-- Empathy -->
+       <div class="empathy" style="width: 50%; margin: 0 25%;" id="nodeempathy">
+   
+    <div id="contenedorempathy"> 
+<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px;background:#EA3546;">
+	<tbody>
+		<tr width="100%">
+
+            <td width="200px">
+            	
+            	<img src="https://static1.squarespace.com/static/557b47e0e4b097936a814d74/t/5e9e103328e36f486f5ca2b0/1587417140540/empathy-logo.png" width="100%" />
+
+            </td>
+
+            <td width="">	
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="background:#EA3546;font-size:0px;font-family:'Tahoma'; padding: 25px;">
+	<tbody>
+
+		<tr width="100%">
+
+            <td width="180px">
+
+                <tr>
+                	<td height="10px"><font color="#ffffff" face="Tahoma"><span style="font-size:18px;line-height:18px;font-weight: 700;" id="nombre_empathy">Nombre Apellido</span></font>
+                	</td>
+                </tr>
+
+                <tr>
+                	<td height="13px"><font color="#ffffff" face="Tahoma"><span style="font-size:10px;line-height:20px;font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;" id="cargo_empathy">Cargo</span></font>
+                	</td>
+                </tr>
+
+				<tr>
+					<td height="9px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:9px;font-weight: 400;">&nbsp;</div>
+					</td>
+				</tr>
+                <tr>
+					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:12px;">Home Office</span>
+					</td>               	
+
+                </tr>
+				<tr>
+					<td height="10px"><a href="tel:0059894311584" class="cel_enlace" target="_blank" style="text-decoration:none;color:#ffffff;"><span style="color:#ffffff;font-family:Tahoma;font-size:10px;line-height:12px;font-weight: 400;"><span style="font-weight: 900;font-size: 9px;">Contacto</span>&nbsp;(+598)&nbsp;<span id="cel_empathy">094 311 584</span></span></a>
+					</td>
+
+				</tr>
+     			<tr>
+					<td height="14px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:14px;font-weight: 400;">&nbsp;</div>
+					</td>
+				</tr>
+
+			    <tr>
+			    	<td height="13px">
+
+			    		<a href="https://www.empathylearn.com/" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Web&nbsp;|&nbsp;
+			    		    </span>
+			    		</a>
+			    		<a href="https://www.linkedin.com/company/alva-creative-house/" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Linkedin&nbsp;|&nbsp;
+			    		    </span>
+			    		</a>
+			    		<a href="https://www.empathylearn.com/" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">
+			    		    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">Últimos trabajos
+			    		    </span>
+			    		</a>
+
+			    	</td>
+
+
+     		    </tr>
+
+
+            </td>
+  
+        </tr>
+
+    </tbody>
+
+</table>
+
+</td>
+
+
+</tr>
+</tbody>
+</table>
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px">
+	<tbody>
+		<tr width="100%">
+            <td width="180px">
+            	<span style="color:#333333;font-family:Tahoma;font-weight: 700;font-size: 8.7px; line-height:12px;">El contenido de este correo es confidencial y privado. Evitá
+imprimirlo. Asegurate de reutilizar o reciclar el papel para minimizar
+su impacto. Consultá cómo podés incorporar mejores prácticas 
+<a href="http://www.reaccion.com.uy/" target="_blank" style="color:#EA3546;font-size:10px;line-height:14px;font-weight: 400;">
+    <span style="color:#EA3546;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">acá. </span></a>
+
+               </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+<br>
+                        <a onclick="copiarFirma('empathy')" name="Enviar" class="btn">Copiar</a>
+
+       </div>
+
+<br><br>
+    </main>
+
+<script type="text/javascript">
+	class Alva {
+      constructor(name, cel) {
+      this.name = name;
+      this.cel = cel;
+      }
+    creadorFirma() {
+      var celular = document.getElementById("celular").value;
+      alert(celular);
+    }
+}
+  
+    function creadorFirma() {
+      var celular = document.getElementById("celular").value;
+      document.getElementById("cel_alva").innerHTML = celular;
+      document.getElementById("cel_reaccion").innerHTML = celular;
+      document.getElementById("cel_empathy").innerHTML = celular;
+      var celUrl = celular.replace(/ /g, "");
+      while(celUrl.charAt(0) === '0')
+      {
+        celUrl = celUrl.substr(1);
+      }
+      var tel_personal = document.getElementsByClassName("cel_enlace");
+      tel_personal[0].href = "tel:00598" + celUrl;
+      tel_personal[1].href = "tel:00598" + celUrl;
+      tel_personal[2].href = "tel:00598" + celUrl;
+      var nombres = document.getElementById("selector");
+      var seleccionado = nombres.options[nombres.selectedIndex].text;
+      document.getElementById("nombre_alva").innerHTML = seleccionado;
+      document.getElementById("nombre_reaccion").innerHTML = seleccionado;
+      document.getElementById("nombre_empathy").innerHTML = seleccionado;
+      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager"];
+        
+      switch (seleccionado) {
+        case "Mariale Ariceta":
+        eliminarAlva();
+        document.getElementById("cargo_reaccion").innerHTML = cargo[0];
+        document.getElementById("cargo_empathy").innerHTML = cargo[4];
+        break;
+
+        case "Ing. Mariana Robano":
+        eliminarAlva();
+        eliminarEmpathy();
+        document.getElementById("cargo_reaccion").innerHTML = cargo[1];
+        break;
+
+        case "Sofía Khayat":
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[2];
+        document.getElementById("cargo_reaccion").innerHTML = cargo[2];
+        break;
+
+        case "Andrés Ramírez":
+        eliminarAlva();
+        eliminarEmpathy();
+        document.getElementById("cargo_reaccion").innerHTML = cargo[3];
+        break;
+
+        case "Mag. Fernanda Ariceta":
+        eliminarReaccion();
+        document.getElementById("cargo_alva").innerHTML = cargo[4];
+        document.getElementById("cargo_empathy").innerHTML = cargo[4];
+        break;
+
+        case "Lic. Camila Mutuberría":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[5];
+        break;
+
+        case "Lic. Florencia Braglia":
+        eliminarReaccion();
+        document.getElementById("cargo_alva").innerHTML = cargo[6];
+        document.getElementById("cargo_empathy").innerHTML = cargo[6];
+        break;
+
+        case "Mag. Gonzalo López Baliñas":
+        eliminarReaccion();
+        document.getElementById("cargo_alva").innerHTML = cargo[7];
+        document.getElementById("cargo_empathy").innerHTML = cargo[7];
+        break;
+
+        case "Emanuel Espinel":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[8];
+        break;
+
+        case "Lic. Sofía Vázquez":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[9];
+        break; 
+
+        case "Sebastián Sacías":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[8];
+        break;       
+
+        case "Lic. Rodrigo Camy":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[8];
+        break;    
+
+        case "Micaela Clavijo":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[10];
+        break;  
+
+        case "Romy Pawlak":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[2];
+        break;  
+
+        case "Marina Quevedo":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[2];
+        break;     
+
+        case "Gastón Thomas":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[11];
+        break;      
+
+        case "Agustina González":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[12];
+        break;  
+
+        case "Valentina Bardanca":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[13];
+        break;     
+
+        case "Moira Shaw":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[14];
+        break;                    
+      }
+
+      function eliminarAlva() {
+      	document.getElementById("nodealva").remove();
+      }
+
+      function eliminarEmpathy() {
+      	document.getElementById("nodeempathy").remove();
+      }
+      
+      function eliminarReaccion() {
+      	document.getElementById("nodereaccion").remove();      	
+      }
+
+
+    }
+
+
+   function copiarFirma(firma) {
+      
+    if (firma === "alva") {
+           var urlField = document.getElementById("contenedoralva");
+    } else if (firma === "reaccion") {
+           var urlField = document.getElementById("contenedorreaccion");
+    } else {
+ 	       var urlField = document.getElementById("contenedorempathy");
+    }
+
+
+  // create a Range object
+  var range = document.createRange();
+
+  // set the Node to select the "range"
+  range.selectNode(urlField);
+
+
+  // add the Range to the set of window selections
+  var selectrange = window.getSelection(range);
+   selectrange.removeAllRanges();
+selectrange.addRange(range);
+
+  // execute 'copy', can't 'cut' in this case
+  document.execCommand('copy');
+
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
