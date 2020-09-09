@@ -71,12 +71,12 @@ a.btn  {
 			            <option value="seba">Sebastián Sacías</option>
 			            <option value="rodri">Lic. Rodrigo Camy</option>
 			            <option value="mica">Micaela Clavijo</option>
-			            <option value="romy">Romy Pawlak</option>
-			            <option value="marina">Marina Quevedo</option>
+				    <option value="marina">Marina Quevedo</option>
 			            <option value="tomi">Gastón Thomas</option>
-			            <option value="agus">Agustina González</option>
 			            <option value="vale">Valentina Bardanca</option>
 			            <option value="moi">Moira Shaw</option>
+				    <option value="moi">Lic. Martina Carámbula</option>
+				    <option value="moi">Cr. Antonella Belerati</option>
 		            </select>
 		            <br><br>
 		            <label for="celular">Ingresá tu celular: </label>
@@ -532,7 +532,7 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
       document.getElementById("nombre_alva").innerHTML = seleccionado;
       document.getElementById("nombre_reaccion").innerHTML = seleccionado;
       document.getElementById("nombre_empathy").innerHTML = seleccionado;
-      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager"];
+      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager", "Jefa de Administración"];
         
       switch (seleccionado) {
         case "Mariale Ariceta":
@@ -613,12 +613,6 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
         document.getElementById("cargo_alva").innerHTML = cargo[10];
         break;  
 
-        case "Romy Pawlak":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[2];
-        break;  
-
         case "Marina Quevedo":
         eliminarReaccion();
         eliminarEmpathy();
@@ -631,12 +625,6 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
         document.getElementById("cargo_alva").innerHTML = cargo[11];
         break;      
 
-        case "Agustina González":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[12];
-        break;  
-
         case "Valentina Bardanca":
         eliminarReaccion();
         eliminarEmpathy();
@@ -647,7 +635,19 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
         eliminarReaccion();
         eliminarEmpathy();
         document.getElementById("cargo_alva").innerHTML = cargo[14];
-        break;                    
+        break;  
+		      
+        case "Lic. Martina Carámbula":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[2];
+        break;		      
+		      
+        case "Cr. Antonella Belerati":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[15];
+        break;   		      
       }
 
       function eliminarAlva() {
