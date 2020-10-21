@@ -77,6 +77,8 @@ a.btn  {
 			            <option value="moi">Moira Shaw</option>
 				    <option value="marti">Martina Carámbula</option>
 				    <option value="anto">Cra. Antonella Belerati</option>
+				    <option value="vicky">Victoria Inzaurralde</option>
+				    <option value="maxi">Lic. Maximiliano Fraigola</option>
 		            </select>
 		            <br><br>
 		            <label for="celular">Ingresá tu celular: </label>
@@ -532,7 +534,7 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
       document.getElementById("nombre_alva").innerHTML = seleccionado;
       document.getElementById("nombre_reaccion").innerHTML = seleccionado;
       document.getElementById("nombre_empathy").innerHTML = seleccionado;
-      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager", "Jefa de Administración"];
+      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager", "Jefa de Administración", "Asistente de producción", "Coordinador de Medios"];
         
       switch (seleccionado) {
         case "Mariale Ariceta":
@@ -647,7 +649,20 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
         eliminarReaccion();
         eliminarEmpathy();
         document.getElementById("cargo_alva").innerHTML = cargo[15];
-        break;   		      
+        break;   
+		      
+	case "Victoria Inzaurralde":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_reaccion").innerHTML = cargo[16];
+        break;   
+
+	case "Lic. Maximiliano Fraigola":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[17];
+        break;   
+		
       }
 
       function eliminarAlva() {
