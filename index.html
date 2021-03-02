@@ -80,7 +80,7 @@ a.btn  {
 				    <option value="agos">Agostina Vaccotti</option>
 				    <option value="romi">Romina Cerna</option>
 				    <option value="gaby">Gabriela Pedreira</option>				    
-				    
+				    <option value="flor_luzardo">Florencia Luzardo</option>				    
 		            </select>
 		            <br><br>
 		            <label for="celular">Ingresá tu celular: </label>
@@ -671,7 +671,13 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
         document.getElementById("cargo_alva").innerHTML = cargo[18];
         break;   		      
       }
-
+	    
+        case "VFlorencia Luzardo":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[13];
+        break;   
+	    
       function eliminarAlva() {
       	document.getElementById("nodealva").remove();
       }
