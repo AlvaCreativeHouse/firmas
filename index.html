@@ -58,27 +58,28 @@ a.btn  {
                 <form>
 		            <label for="selector">Nombre</label>
 		            <select id="selector" name="Nombres" width="200">
+				    <option value="agos">Agostina Vaccotti</option>
+				    <option value="agus">Agustín Machado</option>
+				    <option value="anto">Cra. Antonella Belerati</option>
+			            <option value="cami">Lic. Camila Mutuberría</option>
+			            <option value="ema">Emanuel Espinel</option>
+			            <option value="fer">Mag. Fernanda Ariceta, MBA, MA</option>
+			            <option value="flo">Lic. Florencia Braglia</option>
+				    <option value="flor_luzardo">Florencia Luzardo</option>
+			            <option value="gon">Gonzalo López Baliñas</option>
+			            <option value="juan">Lic. Juan Manuel Pozzi</option>
 			            <option value="mariale">Mariale Ariceta</option>
 			            <option value="mariana">MSc. Ing. Mariana Robano</option>
-			            <option value="sofi_k">Sofía Khayat</option>
-				    <option value="vale_s">Valentina Salaverría</option>
-				    <option value="pablo">Lic. Pablo Montoli</option>
-				    <option value="juan">Lic. Juan Manuel Pozzi</option>
-			            <option value="fer">Mag. Fernanda Ariceta, MBA, MA</option>
-			            <option value="cami">Lic. Camila Mutuberría</option>
-			            <option value="flo">Lic. Florencia Braglia</option>
-			            <option value="gon">Gonzalo López Baliñas</option>
-			            <option value="ema">Emanuel Espinel</option>
-			            <option value="sofi_v">Lic. Sofía Vázquez</option>
-			            <option value="seba">Sebastián Sacías</option>
-			            <option value="rodri">Lic. Rodrigo Camy</option>
 				    <option value="marina">Marina Quevedo</option>
-			            <option value="vale">Valentina Bardanca</option>
 			            <option value="moi">Moira Shaw</option>
-				    <option value="anto">Cra. Antonella Belerati</option>
-				    <option value="agos">Agostina Vaccotti</option>
+				    <option value="pablo">Lic. Pablo Montoli</option>
+			            <option value="rodri">Lic. Rodrigo Camy</option>
 				    <option value="romi">Romina Cerna</option>   
-				    <option value="flor_luzardo">Florencia Luzardo</option>				    
+			            <option value="seba">Sebastián Sacías</option>
+			            <option value="sofi_k">Sofía Khayat</option>
+			            <option value="sofi_v">Lic. Sofía Vázquez</option>
+			            <option value="vale">Valentina Bardanca</option>
+				    <option value="vale_s">Valentina Salaverría</option>
 		            </select>
 		            <br><br>
 		            <label for="celular">Ingresá tu celular: </label>
@@ -537,7 +538,7 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
       document.getElementById("nombre_alva").innerHTML = seleccionado;
       document.getElementById("nombre_reaccion").innerHTML = seleccionado;
       document.getElementById("nombre_empathy").innerHTML = seleccionado;
-      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora","Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración","Community Manager", "Jefa de Administración", "Asistente de producción", "Coordinador de Medios", "Creativa Audiovisual", "Consultor", "Project Manager Junior"];
+      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager", "Jefa de Administración", "Asistente de producción", "Coordinador de Medios", "Creativa Audiovisual", "Consultor", "Project Manager Junior", "Redactor Creativo"];
         
       switch (seleccionado) {
         case "Mariale Ariceta":
@@ -659,8 +660,14 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
         eliminarReaccion();
         eliminarEmpathy();
         document.getElementById("cargo_alva").innerHTML = cargo[2];
+        break;   
+
+	case "Agustín Machado":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[21];
         break;   		           
-	    
+	    	    
         case "Florencia Luzardo":
         eliminarReaccion();
         eliminarEmpathy();
