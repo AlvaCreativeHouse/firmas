@@ -72,6 +72,7 @@ a.btn  {
 			            <option value="mariana">MSc. Ing. Mariana Robano</option>
 				    <option value="marina">Marina Quevedo</option>
 			            <option value="moi">Moira Shaw</option>
+				    <option value="nico">Nicolás Suárez</option>
 				    <option value="pablo">Lic. Pablo Montoli</option>
 			            <option value="rodri">Lic. Rodrigo Camy</option>
 				    <option value="romi">Romina Cerna</option>   
@@ -538,7 +539,7 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
       document.getElementById("nombre_alva").innerHTML = seleccionado;
       document.getElementById("nombre_reaccion").innerHTML = seleccionado;
       document.getElementById("nombre_empathy").innerHTML = seleccionado;
-      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager", "Jefa de Administración", "Asistente de producción", "Coordinador de Medios", "Creativa Audiovisual", "Consultor", "Project Manager Junior", "Redactor Creativo", "Assistant Project Manager"];
+      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager", "Jefa de Administración", "Asistente de producción", "Coordinador de Medios", "Creativa Audiovisual", "Consultor", "Project Manager Junior", "Redactor Creativo", "Assistant Project Manager", "Creatividad Audiovisual"];
         
       switch (seleccionado) {
         case "Mariale Ariceta":
@@ -666,7 +667,13 @@ su impacto. Consultá cómo podés incorporar mejores prácticas
         eliminarReaccion();
         eliminarEmpathy();
         document.getElementById("cargo_alva").innerHTML = cargo[21];
-        break;   		           
+        break; 
+
+	case "Nicolás Suárez":
+        eliminarReaccion();
+        eliminarEmpathy();
+        document.getElementById("cargo_alva").innerHTML = cargo[23];
+        break;  
 	    	    
         case "Florencia Luzardo":
         eliminarReaccion();
