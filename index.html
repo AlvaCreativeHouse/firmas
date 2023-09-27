@@ -1,746 +1,220 @@
+<!doctype html>
+<html>
 
-<!DOCTYPE html>
-<html lang="es">
 <head>
-	<title>Firmas Alva</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/awesomplete.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
 
-	<style type="text/css">
-		body {
-			font-family: 'Montserrat', sans-serif;
-		}
-
-		h1, h3 {
-		   text-align: center;
-		}
-.jumbotron {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #e9ecef;
-    border-radius: .3rem;
-}
-
-a.btn  {
-    color: #fff;
-    background-color: #007bff !important;
-    border-color: #007bff;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-	</style>
 </head>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .awesomplete {
+        display: block;
+        position: relative;
+    }
+    
+    .awesomplete mark {
+        background: hsla(229, 70%, 46%, 0.509);
+    }
+    
+    .awesomplete li:hover mark {
+        background: hsla(229, 89%, 55%, 0.509);
+    }
+    
+    a {
+        color: blue !important;
+        text-decoration: underline !important;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background: #000000;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: rgb(67, 56, 202);
+    }
+</style>
+
 <body>
 
-	<header>
-		  
-		<div class="jumbotron">	
+    <section class="bg-white md:px-0 h-screen flex items-center" id="introContainer" data-aos="zoom-in-down">
+        <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
+            <div class="flex flex-wrap items-center sm:-mx-3">
+                <div class="w-full md:w-1/2 md:px-3">
+                    <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
+                        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+                            <span class="block text-xl uppercase">Alva Creative House</span>
+                            <span class="block xl:inline">Generá tu firma en 3 sencillos pasos</span>
+                        </h1>
+
+                        <ol class="list-none mt-4 text-gray-600">
+                            <li class="mt-16 mb-3 text-gray-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil mr-1 inline-block" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                    <path d="M13.5 6.5l4 4" />
+                                  </svg>
+                                <span class="font-extrabold mr-1">Crear:</span> Llena el formulario con tus datos.
+                            </li>
+                            <li class="mb-3 text-gray-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard mr-1 inline-block" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                                    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                                  </svg>
+                                <span class="font-extrabold mr-1">Copiar:</span> Una vez generada, clic en el botón copiar.
+                            </li>
+                            <li class="text-gray-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-cog mr-1 inline-block" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 19h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v5" />
+                                    <path d="M3 7l9 6l9 -6" />
+                                    <path d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                    <path d="M19.001 15.5v1.5" />
+                                    <path d="M19.001 21v1.5" />
+                                    <path d="M22.032 17.25l-1.299 .75" />
+                                    <path d="M17.27 20l-1.3 .75" />
+                                    <path d="M15.97 17.25l1.3 .75" />
+                                    <path d="M20.733 20l1.3 .75" />
+                                  </svg>
+                                <span class="font-extrabold mr-1">Pegar: </span>Andá a configuraciones de firma en tu correo y pegala.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                    <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                        <div class="bg-white rounded-lg p-10 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+                            <form id="signatureForm">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-600 mb-2">Nombre y Apellido*</label>
+                                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 w-full" type="text" id="name" maxlength="50" oninput="validateName()" required>
+                                    <span id="nameError" class="text-red-500 text-xs mt-1"></span>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="role" class="block text-gray-600 mb-2">Puesto*</label>
+                                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 w-full" type="text" id="role" maxlength="50" oninput="validateRole()" required>
+                                    <span id="roleError" class="text-red-500 text-xs mt-1"></span>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="genderSelect" class="block text-gray-600 mb-2">Pronombre*</label>
+                                    <select class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 w-full" id="genderSelect" onchange="checkOtherPronoun()" required>
+                                        <option value="Ella/La">Ella/La</option>
+                                        <option value="Él/Lo">Él/Lo</option>
+                                        <option value="Elle/Elle">Elle/Elle</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4" style="display: none;" id="otherPronounDiv">
+                                    <label for="otherPronoun" class="block text-gray-600 mb-2">Otro*</label>
+                                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 w-full" type="text" id="otherPronoun" oninput="validateOtherPronoun()" maxlength="10">
+                                    <span id="genderError" class="text-red-500 text-xs mt-1"></span>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="block text-gray-600 mb-2">Empresa*</span>
+                                    <div class="flex flex-col md:flex-row gap-3">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="form-radio" name="company" value="0" required>
+                                            <span class="ml-2">Alva Creative House</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="form-radio" name="company" value="1">
+                                            <span class="ml-2">Alva</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="form-radio" name="company" value="2">
+                                            <span class="ml-2">ReAcción</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="form-radio" name="company" value="3">
+                                            <span class="ml-2">Empathy</span>
+                                        </label>
+                                    </div>
+                                    <span id="companyError" class="text-red-500 text-xs mt-1"></span>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="mail" class="block text-gray-600 mb-2">Mail*</label>
+                                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 w-full" type="email" id="mail" autocomplete="off" oninput="validateMail()" required>
+                                    <span id="mailError" class="text-red-500 text-xs mt-1"></span>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="cell" class="block text-gray-600 mb-2">Celular</label>
+                                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 w-full" type="text" id="cell">
+                                </div>
+                                <div class="mb-6">
+                                    <label for="whatsapp" class="block text-gray-600 mb-2">Whatsapp</label>
+                                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 w-full" type="text" id="whatsapp">
+                                </div>
+                                <div class="flex flex-row">
+                                    <button type="reset" class="relative flex flex-col items-center sm:flex-row sm:space-x-4 text-gray-600 border-2 border-indigo-600 py-3 px-6 focus:outline-none h rounded-md sm:mb-0 hover:bg-indigo-700 hover:text-white sm:w-auto rounded text-lg mr-3">Resetear</button>
+                                    <button type="button" class="relative flex flex-col items-center sm:flex-row sm:space-x-4 text-white bg-indigo-600 border-0 py-3 px-6 focus:outline-none h rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto rounded text-lg" id="generateButton">Generar firma <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-screen items-center" style="display: none;" id="signatureContainer">
+        <div class="p-12 bg-white container max-w-6xl mx-auto rounded-md shadow-xl sm:rounded-xl">
+
+            <div id="signatureOutput"></div>
+
+            <div class="flex flex-row mt-5">
+                <button type="button" class="relative flex flex-col items-center sm:flex-row sm:space-x-4 text-gray-600 border-2 border-indigo-600 py-3 px-6 focus:outline-none h rounded-md sm:mb-0 hover:bg-indigo-700 hover:text-white sm:w-auto rounded text-lg mr-3" id="removeImagesButton">Versión mobile 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <button id="copyButton" type="button" class="relative flex flex-col items-center sm:flex-row sm:space-x-4 text-white bg-indigo-600 border-0 py-3 px-6 focus:outline-none h rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto rounded text-lg mr-3">Copiar Firma 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                        <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                    </svg>
+                </button>
+                <button id="reloadButton" id="copyButton" type="button" class="relative flex flex-col items-center sm:flex-row sm:space-x-4 text-white bg-gray-900 border-0 p-3 focus:outline-none h sm:mb-0 hover:bg-indigo-700 sm:w-auto rounded-full text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-5" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747" />
+                        <path d="M20 4v5h-5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/awesomplete.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="./js/app.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 
-		    	<h1>Alva | ReAcción | Empathy</h1>
-                <h3>Pie de mail </h3>
-            	<br />
-            	<div style="display:flex; width: 30%; margin: 0 35%;">
-            	<div class="formulario" style="text-align: left;">
-                <form>
-		            <label for="selector">Nombre</label>
-		            <select id="selector" name="Nombres" width="200">
-				    <option value="agos">Valentina Ribeiro</option>
-				    <option value="agus">Agustín Machado</option>
-				    <option value="anto">Cra. Antonella Belerati</option>
-			            <option value="cami">Lic. Camila Mutuberría</option>
-			            <option value="ema">Mariano Rogel</option>
-			            <option value="fer">Mag. Fernanda Ariceta, MBA, MA</option>
-			            <option value="flo">Lic. Florencia Braglia</option>
-				    <option value="flor_luzardo">Inés Gutierrez</option>
-			            <option value="gon">Gonzalo López Baliñas</option>
-			            <option value="juli">Julieta Poyet</option>
-			            <option value="mariale">Mariale Ariceta</option>
-			            <option value="mariana">MSc. Ing. Mariana Robano</option>
-				    <option value="marina">Marina Quevedo</option>
-			            <option value="moi">Moira Shaw</option>
-				    <option value="natalia">Natalia Fiol</option>
-				    <option value="nico">Nicolás Suárez</option>
-				    <option value="pablo">Lic. Pablo Montoli</option>
-			            <option value="rodri">Lic. Rodrigo Camy</option>
-			            <option value="seba">Sebastián Sacías</option>
-			            <option value="sofi_k">Sofía Khayat</option>
-			            <option value="sofi_v">Mag. Sofía Vázquez</option>
-			            <option value="vale">Valentina Bardanca</option>
-				    <option value="vale_b">Valentina Bukoviner</option>
-				    <option value="isa">Isabel Rodríguez</option>
-		            </select>
-		            <br><br>
-		            <label for="celular">Ingresá tu celular: </label>
-		            <input type="text" name="celular" id="celular" value="094 311 584" />
-
-
-		            <br /><br />
-                        <a onclick="creadorFirma()" name="Enviar" class="btn">Generar</a>
-                        <a onclick="location.reload();" name="Reset" class="btn" style="background-color: #EA3546 !important">Reset</a>
-                        <a onclick="versionesMobile()" name="Mobile" class="btn" style="background-color: #21973f !important">Versiones mobile</a>
-	            </form>          
-	            </div>
-	            </div>
-
-         </div>
-
-	</header>
- 
-    <main>
-
-
-    	<br><br>
-    	
-       <div class="alva" style="width: 50%; margin: 0 25%;" id="nodealva">
-    
-
-    <div id="contenedoralva">  	
-
-<table cellpadding="0" cellspacing="0" width="">
-<tbody>
-<tr>
-<td>
-<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px;background:#A8822E;">
-	<tbody>
-		<tr width="100%">
-
-            <td width="200px" id="logo_alva">
-            	
-            	<img src="https://static1.squarespace.com/static/557b47e0e4b097936a814d74/t/5ea05297264fa24dbb0304b5/1587565222828/alva-logo.png" width="100%" />
-
-            </td>
-
-            <td width="">	
-
-
-
-
-<table cellpadding="0" cellspacing="0" width="100%" style="background:#A8822E;font-size:0px;font-family:'Tahoma'; padding: 22px 22px 22px 10px;">
-	<tbody>
-
-		<tr width="100%">
-
-            <td width="100%">
-
-                <tr>
-                	<td height="10px"><font color="#ffffff" face="Tahoma"><span style="font-size:18px;line-height:18px;font-weight: 700;" id="nombre_alva">Nombre Apellido</span></font>
-                	</td>
-                </tr>
-
-                <tr>
-                	<td height="13px"><font color="#ffffff" face="Tahoma"><span style="font-size:10px;line-height:10px;font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;" id="cargo_alva">Cargo</span></font>
-                	</td>
-                </tr>
-
-				<tr>
-					<td height="9px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:9px;font-weight: 400;">&nbsp;</div>
-					</td>
-				</tr>
-                <tr>
-					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:12px;">Home Office</span>
-					</td>               	
-
-                </tr>
-				<tr>
-					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-size:10px;line-height:12px;font-weight: 400;"><span style="font-weight: 900;font-size: 9px;">Contacto</span>&nbsp;<a href="tel:0059894311584" class="cel_enlace" target="_blank" style="text-decoration:none !important;color:#ffffff;">(+598)&nbsp;<span id="cel_alva">094 311 584</span></a></span>
-					</td>
-
-				</tr>
-     			<tr>
-					<td height="14px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:14px;font-weight: 400;">&nbsp;</div>
-					</td>
-				</tr>
-
-			    <tr>
-			    	<td height="13px">
-
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-
-			    			<a href="https://alva.com.uy/?utm_source=mail" target="_blank" style="text-decoration:none !important;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">Web</a>&nbsp;|&nbsp;
-
-			    		</span>
-
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    			<a href="https://www.linkedin.com/company/alva-creative-house/" target="_blank" style="text-decoration:none !important;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">LinkedIn</a>&nbsp;|&nbsp;
-
-			    		</span>
-
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    			<a href="https://alva.com.uy/portfolio/?utm_source=mail" target="_blank" style="text-decoration:none !important;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">Últimos trabajos</a>
-			    		</span>
-
-			    	</td>
-
-
-     		    </tr>
-
-
-            </td>
-  
-        </tr>
-
-    </tbody>
-
-</table>
-
-</td>
-
-
-</tr>
-</tbody>
-</table>
-
-
-<table cellpadding="0" cellspacing="0" width="" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px">
-	<tbody>
-		<tr width="100%">
-            <td width="100%">
-            	<span style="color:#333333;font-family:Tahoma;font-weight: 700;font-size: 8.7px; line-height:12px;">Alva es una empresa comprometida con los Principios de Empoderamiento
-de las Mujeres. <br id="espacio_alva"> El contenido de este correo es confidencial y privado. 
-Evitá imprimirlo, asegurate de reutilizar o reciclar el papel para minimizar
-su impacto.
-               </span>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-</td>
-
-
-</tr>
-</tbody>
-</table>
-
-
-
-</div> 
-<br>
-                        <a onclick="copiarFirma('alva')" name="Enviar" class="btn">Copiar</a>
-    	<br><br>  
-
-       </div>
-
-  
-
-    	<!-- ReAcción --> 
-
-       <div class="reaccion" style="width: 50%; margin: 0 25%;" id="nodereaccion">
- 
-    <div id="contenedorreaccion"> 
-
-<table cellpadding="0" cellspacing="0" width="">
-<tbody>
-<tr>
-<td>
-
-<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px;background:#5FBA4F;">
-	<tbody>
-		<tr width="100%">
-
-            <td width="200px" id="logo_reaccion">
-            	
-            	<img src="https://static1.squarespace.com/static/557b47e0e4b097936a814d74/t/5e9e0fee0e733561f35c9d63/1587417071966/reaccion-logo.png" width="100%" id="imagen-reaccion"/>
-
-            </td>
-
-            <td width="">	
-
-
-
-
-<table cellpadding="0" cellspacing="0" width="100%" style="background:#5FBA4F;font-size:0px;font-family:'Tahoma'; padding: 22px 22px 22px 10px;">
-	<tbody>
-
-		<tr width="100%">
-
-            <td width="180px">
-
-                <tr>
-                	<td height="10px"><font color="#ffffff" face="Tahoma"><span style="font-size:18px;line-height:18px;font-weight: 700;" id="nombre_reaccion">Nombre Apellido</span></font>
-                	</td>
-                </tr>
-
-                <tr>
-                	<td height="13px"><font color="#ffffff" face="Tahoma"><span style="font-size:10px;line-height:10px;font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;" id="cargo_reaccion">Cargo</span></font>
-                	</td>
-                </tr>
-
-				<tr>
-					<td height="9px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:9px;font-weight: 400;">&nbsp;</div>
-					</td>
-				</tr>
-                <tr>
-					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:12px;">Home Office</span>
-					</td>               	
-
-                </tr>
-				<tr>
-					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-size:10px;line-height:12px;font-weight: 400;"><span style="font-weight: 900;font-size: 9px;">Contacto</span>&nbsp;
-						<a href="tel:0059894311584" class="cel_enlace" target="_blank" style="text-decoration:none;color:#ffffff;">(+598)&nbsp;<span id="cel_reaccion">094 311 584</span></a></span>
-					</td>
-
-				</tr>
-     			<tr>
-					<td height="14px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:14px;font-weight: 400;">&nbsp;</div>
-					</td>
-				</tr>
-
-			    <tr>
-			    	<td height="13px">
-
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    		    <a href="https://www.reaccion.com.uy/?utm_source=mail" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">Web</a>&nbsp;|&nbsp;
-			    		    
-			    		</span>
-			    		
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    			<a href="https://www.linkedin.com/company/reaccion-latam/" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">LinkedIn</a>&nbsp;|&nbsp;
-			    		</span>
-			    		
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    			<a href="https://www.reaccion.com.uy/?utm_source=mail" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">Últimos trabajos</a>
-			    		</span>
-			    		
-			    	</td>
-
-
-     		    </tr>
-
-
-            </td>
-  
-        </tr>
-
-    </tbody>
-
-</table>
-
-</td>
-
-
-</tr>
-</tbody>
-</table>
-
-
-<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px">
-	<tbody>
-		<tr width="100%">
-            <td width="100%;">
-            	<span style="color:#333333;font-family:Tahoma;font-weight: 700;font-size: 8.7px; line-height:12px;">El contenido de este correo es confidencial y privado.<br> Evitá
-imprimirlo. Asegurate de reutilizar o reciclar el papel para minimizar
-su impacto. Consultá cómo podés incorporar mejores prácticas 
-<a href="https://www.reaccion.com.uy/?utm_source=mail" target="_blank" style="color:#5FBA4F;font-size:10px;line-height:14px;font-weight: 400;">
-    <span style="color:#5FBA4F;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">acá.</span></a>
-
-               </span>
-            </td>
-        </tr>
-    </tbody>
-</table>
-</td>
-
-
-</tr>
-</tbody>
-</table>
-
-
-</div>
-<br>
-                        <a onclick="copiarFirma('reaccion')" name="Enviar" class="btn">Copiar</a>
-    	<br><br>  
-
-       </div>
-	    
-<!-- Termina ReAcción -->
-
-
-
-       <!-- Empathy -->
-       <div class="empathy" style="width: 50%; margin: 0 25%;" id="nodeempathy">
-   
-    <div id="contenedorempathy"> 
-
-
-  <table cellpadding="0" cellspacing="0" width="">
-<tbody>
-<tr>
-<td>  	
-<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px;background:#EA3546;">
-	<tbody>
-		<tr width="100%">
-
-            <td width="200px" id="logo_empathy">
-            	
-            	<img src="https://static1.squarespace.com/static/557b47e0e4b097936a814d74/t/5e9e103328e36f486f5ca2b0/1587417140540/empathy-logo.png" width="100%" />
-
-            </td>
-
-            <td width="">	
-
-
-
-
-<table cellpadding="0" cellspacing="0" width="100%" style="background:#EA3546;font-size:0px;font-family:'Tahoma'; padding: 22px 22px 22px 10px;">
-	<tbody>
-
-		<tr width="100%">
-
-            <td width="180px">
-
-                <tr>
-                	<td height="10px"><font color="#ffffff" face="Tahoma"><span style="font-size:18px;line-height:18px;font-weight: 700;" id="nombre_empathy">Nombre Apellido</span></font>
-                	</td>
-                </tr>
-
-                <tr>
-                	<td height="13px"><font color="#ffffff" face="Tahoma"><span style="font-size:10px;line-height:10px;font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;" id="cargo_empathy">Cargo</span></font>
-                	</td>
-                </tr>
-
-				<tr>
-					<td height="9px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:9px;font-weight: 400;">&nbsp;</div>
-					</td>
-				</tr>
-                <tr>
-					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:12px;">Home Office</span>
-					</td>               	
-
-                </tr>
-				<tr>
-					<td height="10px"><span style="color:#ffffff;font-family:Tahoma;font-size:10px;line-height:12px;font-weight: 400;"><span style="font-weight: 900;font-size: 9px;">Contacto</span>&nbsp;
-
-						<a href="tel:0059894311584" class="cel_enlace" target="_blank" style="text-decoration:none;color:#ffffff;">(+598)&nbsp;<span id="cel_empathy">094 311 584</span></a></span>
-					</td>
-
-				</tr>
-     			<tr>
-					<td height="14px"><div style="color:#6E6E70;font-family:Verdana;font-size:4px;line-height:14px;font-weight: 400;">&nbsp;</div>
-					</td>
-				</tr>
-
-			    <tr>
-			    	<td height="13px">
-
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    			<a href="https://www.empathylearn.com/?utm_source=mail" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">Web</a>&nbsp;|&nbsp;
-			    		</span>
-			    		<span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    			<a href="https://www.linkedin.com/company/alva-creative-house/" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">LinkedIn</a>&nbsp;|&nbsp;
-			    		</span>
-			    	    <span style="color:#ffffff;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">
-			    	    	<a href="https://www.empathylearn.com/?utm_source=mail" target="_blank" style="text-decoration:none;color:#ffffff;font-size:10px;line-height:14px;font-weight: 400;">Últimos trabajos</a>
-			    		</span>
-
-			    	</td>
-
-
-     		    </tr>
-
-
-            </td>
-  
-        </tr>
-
-    </tbody>
-
-</table>
-
-</td>
-
-
-</tr>
-</tbody>
-</table>
-
-
-<table cellpadding="0" cellspacing="0" width="100%" style="font-size:0px;font-family:'Tahoma';color: #333333;padding: 5px">
-	<tbody>
-		<tr width="100%">
-            <td width="100%">
-            	<span style="color:#333333;font-family:Tahoma;font-weight: 700;font-size: 8.7px; line-height:12px;">El contenido de este correo es confidencial y privado.<br> Evitá
-imprimirlo. Asegurate de reutilizar o reciclar el papel para minimizar
-su impacto. Consultá cómo podés incorporar mejores prácticas 
-<a href="http://www.reaccion.com.uy/?utm_source=mail" target="_blank" style="color:#EA3546;font-size:10px;line-height:14px;font-weight: 400;">
-    <span style="color:#EA3546;font-family:Tahoma;font-weight: 900;font-size: 9px; line-height:14px;">acá.</span></a>
-
-               </span>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-</td>
-
-
-</tr>
-</tbody>
-</table>
-
-</div>
-
-<br>
-                        <a onclick="copiarFirma('empathy')" name="Enviar" class="btn">Copiar</a>
-
-       </div>
-
-
-
-
-<br><br>
-
-
-
-    </main>
-
-<script type="text/javascript">
-	class Alva {
-      constructor(name, cel) {
-      this.name = name;
-      this.cel = cel;
-      }
-    creadorFirma() {
-      var celular = document.getElementById("celular").value;
-      alert(celular);
-    }
-}
-  
-    function creadorFirma() {
-      var celular = document.getElementById("celular").value;
-      document.getElementById("cel_alva").innerHTML = celular;
-      document.getElementById("cel_reaccion").innerHTML = celular;
-      document.getElementById("cel_empathy").innerHTML = celular;
-      var celUrl = celular.replace(/ /g, "");
-      while(celUrl.charAt(0) === '0')
-      {
-        celUrl = celUrl.substr(1);
-      }
-      var tel_personal = document.getElementsByClassName("cel_enlace");
-      tel_personal[0].href = "tel:00598" + celUrl;
-      tel_personal[1].href = "tel:00598" + celUrl;
-      tel_personal[2].href = "tel:00598" + celUrl;
-      var nombres = document.getElementById("selector");
-      var seleccionado = nombres.options[nombres.selectedIndex].text;
-      document.getElementById("nombre_alva").innerHTML = seleccionado;
-      document.getElementById("nombre_reaccion").innerHTML = seleccionado;
-      document.getElementById("nombre_empathy").innerHTML = seleccionado;
-      var cargo = ["Directora Creativa", "Directora Técnica", "Project Manager", "Control Ambiental", "Directora", "Directora de Cuentas", "Directora Creativa", "Director Creativo Ejecutivo", "Diseñador", "Diseñadora", "Redactora Creativa", "Producción Audiovisual", "Coordinadora de Medios", "Administración", "Community Manager", "Jefa de Administración", "Asistente de producción", "Coordinador de Medios", "Creativa Audiovisual", "Consultor", "Project Manager Junior", "Redactor Creativo", "Assistant Project Manager", "Creatividad Audiovisual"];
-        
-      switch (seleccionado) {
-        case "Mariale Ariceta":
-        eliminarAlva();
-        document.getElementById("cargo_reaccion").innerHTML = cargo[0];
-        document.getElementById("cargo_empathy").innerHTML = cargo[4];
-        break;
-
-        case "MSc. Ing. Mariana Robano":
-        eliminarAlva();
-        eliminarEmpathy();
-        document.getElementById("cargo_reaccion").innerHTML = cargo[1];
-        break;
-
-        case "Sofía Khayat":
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[2];
-        document.getElementById("cargo_reaccion").innerHTML = cargo[2];
-        break;
-		      
-        case "Valentina Salaverría":
-        eliminarAlva();
-        eliminarEmpathy();
-        document.getElementById("cargo_reaccion").innerHTML = cargo[22];
-        break;
-
-	case "Lic. Pablo Montoli":
-        eliminarAlva();
-        document.getElementById("cargo_reaccion").innerHTML = cargo[19];
-        document.getElementById("cargo_empathy").innerHTML = cargo[19];
-        break;
-
-	case "Lic. Juan Manuel Pozzi":
-        eliminarAlva();
-        document.getElementById("cargo_reaccion").innerHTML = cargo[20];
-        document.getElementById("cargo_empathy").innerHTML = cargo[20];
-        break;		      
-		      
-        case "Mag. Fernanda Ariceta, MBA, MA":
-        eliminarReaccion();
-        document.getElementById("cargo_alva").innerHTML = cargo[4];
-        document.getElementById("cargo_empathy").innerHTML = cargo[4];
-        break;
-
-        case "Lic. Camila Mutuberría":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[5];
-        break;
-
-        case "Lic. Florencia Braglia":
-        eliminarReaccion();
-        document.getElementById("cargo_alva").innerHTML = cargo[6];
-        document.getElementById("cargo_empathy").innerHTML = cargo[6];
-        break;
-
-        case "Gonzalo López Baliñas":
-        eliminarReaccion();
-        document.getElementById("cargo_alva").innerHTML = cargo[7];
-        document.getElementById("cargo_empathy").innerHTML = cargo[7];
-        break;
-
-        case "Emanuel Espinel":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[8];
-        break;
-
-        case "Lic. Sofía Vázquez":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[9];
-        break; 
-
-        case "Sebastián Sacías":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[8];
-        break;       
-
-        case "Lic. Rodrigo Camy":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[8];
-        break;    
-
-        case "Marina Quevedo":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[2];
-        break;     
-
-        case "Valentina Bardanca":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[13];
-        break;     
-
-        case "Moira Shaw":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[14];
-        break;  
-		       
-        case "Cra. Antonella Belerati":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[15];
-        break;   
-		     
-	case "Agostina Vaccotti":
-        eliminarAlva();
-        cambiarImagenReaccion();
-        document.getElementById("cargo_reaccion").innerHTML = cargo[2];
-        document.getElementById("cargo_empathy").innerHTML = cargo[2]; 
-        break;   	      
-
-	case "Natalia Fiol":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[2];
-        break;   
-
-	case "Agustín Machado":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[21];
-        break; 
-
-	case "Nicolás Suárez":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[23];
-        break;  
-	    	    
-        case "Florencia Luzardo":
-        eliminarReaccion();
-        eliminarEmpathy();
-        document.getElementById("cargo_alva").innerHTML = cargo[13];
-        break;   
-      }	    
-	    
-      function eliminarAlva() {
-      	document.getElementById("nodealva").remove();
-      }
-
-      function eliminarEmpathy() {
-      	document.getElementById("nodeempathy").remove();
-      }
-      
-      function eliminarReaccion() {
-      	document.getElementById("nodereaccion").remove();      	
-      }
-
-      function cambiarImagenReaccion() {
-      	document.getElementById("imagen-reaccion").src="https://images.squarespace-cdn.com/content/v1/557b47e0e4b097936a814d74/1627413614192-Z7D8NEFTSOUUUMZI104W/reaccion_junto_empathy-logo.png";      	
-      }
-    }
-
-
-   function copiarFirma(firma) {
-      
-    if (firma === "alva") {
-           var urlField = document.getElementById("contenedoralva");
-    } else if (firma === "reaccion") {
-           var urlField = document.getElementById("contenedorreaccion");
-    } else {
- 	       var urlField = document.getElementById("contenedorempathy");
-    }
-
-
-  // create a Range object
-  var range = document.createRange();
-
-  // set the Node to select the "range"
-  range.selectNode(urlField);
-
-
-  // add the Range to the set of window selections
-  var selectrange = window.getSelection(range);
-   selectrange.removeAllRanges();
-selectrange.addRange(range);
-
-  // execute 'copy', can't 'cut' in this case
-  document.execCommand('copy');
-
-}
-
- function versionesMobile() {
- 	document.getElementById("logo_alva").remove();
- 	document.getElementById("logo_reaccion").remove();
- 	document.getElementById("logo_empathy").remove();
- 	document.getElementById("espacio_alva").remove();
- }
-
-
-
-
-
-
-</script>
 </body>
+
 </html>
