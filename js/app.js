@@ -1,8 +1,13 @@
 import { template } from './table.js';
 
 const company = ['Alva Creative House', 'Alva', 'ReAcción', 'Empathy'];
-const logo = ['./img/ach-logo.png', './img/alva-logo.png', './img/reaccion-logo.png', './img/empathy-logo.png'];
-const mainLogo = ['./img/ach-main.png', './img/alva-main.png', './img/reaccion-main.png', './img/empathy-main.png'];
+
+// const logo = ['./img/ach-logo.png', './img/alva-logo.png', './img/reaccion-logo.png', './img/empathy-logo.png'];
+// const mainLogo = ['./img/ach-main.png', './img/alva-main.png', './img/reaccion-main.png', './img/empathy-main.png']; 
+
+const logo = ['https://alvacreativehouse.github.io/firmas/img/ach-logo.png', 'https://alvacreativehouse.github.io/firmas/img/alva-logo.png', 'https://alvacreativehouse.github.io/firmas/img/reaccion-logo.png', 'https://alvacreativehouse.github.io/firmas/img/empathy-logo.png'];
+const mainLogo = ['https://alvacreativehouse.github.io/firmas/img/ach-main.png', 'https://alvacreativehouse.github.io/firmas/img/alva-main.png', 'https://alvacreativehouse.github.io/firmas/img/reaccion-main.png', 'https://alvacreativehouse.github.io/firmas/img/empathy-main.png'];
+
 const url = ['https://www.alvacreativehouse.com', 'https://www.alva.com.uy/', 'https://reaccion.com.uy/', 'https://www.empathylearn.com/']
 
 function getContactWays(mail, whatsapp, cell) {
@@ -50,6 +55,8 @@ function isValidForm() {
     const companyRadios = document.getElementsByName('company');
     const companySelected = [...companyRadios].some(radio => radio.checked);
     const mail = document.getElementById('mail').value;
+    let cell = document.getElementById('cell').value.trim();
+    let whatsapp = document.getElementById('whatsapp').value.trim();
 
     if (!name) {
         document.getElementById("nameError").textContent = 'El campo Nombre y Apellido es obligatorio.';
@@ -94,6 +101,30 @@ function isValidForm() {
     if (genderSelect === 'Otro' && otherPronoun === '') {
         document.getElementById("genderError").textContent = 'Por favor, especifique el pronombre.';
         return false;
+    }
+
+    if (cell !== '') {
+
+        cell = cell.replace(/^(\+598|00598|0)/, '');
+
+        if (!/^[0-9]+$/.test(cell)) {
+            document.getElementById("cellError").textContent = 'El número de teléfono no es válido.';
+            return false;
+        }
+
+        document.getElementById('cell').value = cell;
+    }
+
+    if (whatsapp !== '') {
+
+        whatsapp = whatsapp.replace(/^(\+598|00598|0)/, '');
+
+        if (!/^[0-9]+$/.test(whatsapp)) {
+            document.getElementById("whatsappError").textContent = 'El número de WhatsApp no es válido.';
+            return false;
+        }
+
+        document.getElementById('whatsapp').value = whatsapp;
     }
 
     return true;
@@ -176,6 +207,33 @@ document.getElementById('mail').oninput = function() {
     document.getElementById("mailError").textContent = '';
 };
 
+document.getElementById('cell').oninput = function() {
+    const cell = this.value;
+
+    if (cell !== '') {
+        if (!/^[0-9]+$/.test(cell)) {
+            document.getElementById("cellError").textContent = 'El número de teléfono no es válido.';
+            return;
+        }
+    }
+
+    document.getElementById("cellError").textContent = '';
+};
+
+document.getElementById('whatsapp').oninput = function() {
+    const whatsapp = this.value;
+
+    if (whatsapp !== '') {
+        if (!/^[0-9]+$/.test(whatsapp)) {
+            document.getElementById("whatsappError").textContent = 'El número de WhatsApp no es válido.';
+            return;
+        }
+    }
+
+    document.getElementById("whatsappError").textContent = '';
+};
+
+
 function isValidEmail(email) {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
@@ -219,9 +277,8 @@ function generateSignature() {
         .replace("{{gender}}", gender)
         .replace("{{role}}", role)
         .replace("{{url}}", url[companyIndex])
-        .replace("{{urlCompany}}", url[companyIndex])
-        .replace("{{urlCompanyFooter}}", url[companyIndex])
         .replace("{{company}}", company[companyIndex])
+        .replace("{{companyFooter}}", company[companyIndex])
         .replace("{{logo}}", logo[companyIndex]);
 
     document.getElementById('signatureOutput').innerHTML = signature;
@@ -245,8 +302,26 @@ function generateSignature() {
 }
 
 function copySignature() {
+    const signatureOutput = document.getElementById('signatureOutput');
+
+    // Recorrer todos los elementos descendientes del contenedor de firma
+    const elementsToClean = signatureOutput.querySelectorAll('*');
+    elementsToClean.forEach(element => {
+        const inlineStyles = element.getAttribute('style');
+        if (inlineStyles) {
+            // Filtrar y mantener solo los estilos no relacionados con Tailwind CSS
+            const cleanedStyles = inlineStyles
+                .split(';')
+                .filter(style => !style.trim().startsWith('--tw-'))
+                .join(';');
+
+            element.setAttribute('style', cleanedStyles);
+        }
+    });
+
+    // Seleccionar y copiar el contenido limpio
     const range = document.createRange();
-    range.selectNode(document.getElementById('signatureOutput'));
+    range.selectNode(signatureOutput);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
     document.execCommand('copy');
@@ -258,9 +333,9 @@ function copySignature() {
         title: '¡Firma copiada!',
         showConfirmButton: false,
         timer: 1500
-    })
-
+    });
 }
+
 
 function removeCellsContainingImages() {
     const table = document.querySelector("table");
@@ -283,9 +358,9 @@ function goToTop() {
 
 function adjustSize() {
 
-    const tdLogo = document.querySelector("td[width='64']");
-    const logo = document.querySelector("img[width='54']");
-    const tdName = document.querySelector("td[width='575']");
+    const tdLogo = document.querySelector("td[width='57']");
+    const logo = document.querySelector("img[width='47']");
+    const tdName = document.querySelector("td[width='583']");
     const imageFooter = document.querySelector("img[width='430']");
 
     const companyIndex = [...document.getElementsByName('company')].findIndex(radio => radio.checked);
@@ -296,10 +371,18 @@ function adjustSize() {
         logo.width = 108;
         tdLogo.width = 120;
         tdName.width = 520;
+    } else if (companyIndex == 2) {
+        logo.width = 65;
+        tdLogo.width = 75;
+        tdName.width = 565;
+    } else if (companyIndex == 3) {
+        logo.width = 50;
+        tdLogo.width = 60;
+        tdName.width = 580;
     } else {
-        logo.width = 54;
-        tdLogo.width = 64;
-        tdName.width = 575;
+        logo.width = 47;
+        tdLogo.width = 57;
+        tdName.width = 583;
     }
 }
 
