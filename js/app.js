@@ -1,14 +1,14 @@
 import { template } from './table.js';
 
 const company = ['Alva Creative House', 'Alva', 'ReAcción', 'Empathy'];
-
-// const logo = ['./img/ach-logo.png', './img/alva-logo.png', './img/reaccion-logo.png', './img/empathy-logo.png'];
-// const mainLogo = ['./img/ach-main.png', './img/alva-main.png', './img/reaccion-main.png', './img/empathy-main.png']; 
-
 const logo = ['https://alvacreativehouse.github.io/firmas/img/ach-logo.png', 'https://alvacreativehouse.github.io/firmas/img/alva-logo.png', 'https://alvacreativehouse.github.io/firmas/img/reaccion-logo.png', 'https://alvacreativehouse.github.io/firmas/img/empathy-logo.png'];
 const mainLogo = ['https://alvacreativehouse.github.io/firmas/img/ach-main.png', 'https://alvacreativehouse.github.io/firmas/img/alva-main.png', 'https://alvacreativehouse.github.io/firmas/img/reaccion-main.png', 'https://alvacreativehouse.github.io/firmas/img/empathy-main.png'];
 
-const url = ['https://www.alvacreativehouse.com', 'https://www.alva.com.uy/', 'https://reaccion.com.uy/', 'https://www.empathylearn.com/']
+const url = ['https://www.alvacreativehouse.com', 'https://www.alva.com.uy/', 'https://reaccion.com.uy/', 'https://www.empathylearn.com/'];
+const instagram = ['https://www.instagram.com/alvacreativehouse/', 'https://www.instagram.com/alvacreativehouse/', 'https://www.instagram.com/reaccionlatam/', 'https://www.instagram.com/empathy.latam/'];
+const linkedin = ['https://www.linkedin.com/company/alva-creative-house/', 'https://www.linkedin.com/company/alva-creative-house/', 'https://www.linkedin.com/company/reaccion-latam', 'https://www.linkedin.com/company/empathylearn'];
+const alt = ['Logo de Alva Creative House', 'Logo de Alva', 'Logo de Reacción', 'Logo de Empathy'];
+const aria = ['Recuadro negro con bordes redondeado con un rayo en su interior.', 'Una línea que conforma la palabra Alva.', 'Tres flechas quebradas que se señalan entre sí.', 'Una letra E formada de partes de puzzle.'];
 
 function getContactWays(mail, whatsapp, cell) {
     const links = [];
@@ -253,10 +253,24 @@ function generateSignature() {
 
     const nameInput = document.getElementById('name').value.trim();
     const splitName = nameInput.split(' ', 3);
-    const name = splitName.length > 1 ? splitName[0] + "<br>" + splitName.slice(1).join(' ') : nameInput;
-    const nameCapitalized = name.toUpperCase();
 
-    const role = document.getElementById('role').value.toUpperCase();
+    const nameCapitalized = splitName.map(part => {
+        const firstLetter = part.charAt(0).toUpperCase();
+        const restOfWord = part.slice(1).toLowerCase();
+        return firstLetter + restOfWord;
+    }).join(' ');
+
+    let splitNameCapitalized = nameCapitalized.split(' ', 3);
+    let name;
+    if (splitNameCapitalized.length > 1) {
+        name = splitNameCapitalized[0] + "<br>" + splitNameCapitalized.slice(1).join(' ');
+    }
+
+
+    const roleRaw = document.getElementById('role').value;
+    const role = roleRaw.toLowerCase().replace(/^(.)|\s(.)/g, function($1) {
+        return $1.toUpperCase();
+    });
     const mail = document.getElementById('mail').value;
     const cell = document.getElementById('cell').value;
     const whatsapp = document.getElementById('whatsapp').value;
@@ -273,12 +287,16 @@ function generateSignature() {
 
     signature = signature.replace("{{contactSentence}}", contactSentence)
         .replace("{{main-logo}}", mainLogo[companyIndex])
-        .replace("{{name}}", nameCapitalized)
+        .replace("{{name}}", name)
         .replace("{{gender}}", gender)
         .replace("{{role}}", role)
         .replace("{{url}}", url[companyIndex])
-        .replace("{{company}}", company[companyIndex])
+        .replace("{{instagram}}", instagram[companyIndex])
+        .replace("{{linkedin}}", linkedin[companyIndex])
+        .replace("{{company}}", company[companyIndex].toUpperCase())
         .replace("{{companyFooter}}", company[companyIndex])
+        .replace("{{alt}}", alt[companyIndex])
+        .replace("{{aria}}", aria[companyIndex])
         .replace("{{logo}}", logo[companyIndex]);
 
     document.getElementById('signatureOutput').innerHTML = signature;
@@ -304,12 +322,10 @@ function generateSignature() {
 function copySignature() {
     const signatureOutput = document.getElementById('signatureOutput');
 
-    // Recorrer todos los elementos descendientes del contenedor de firma
     const elementsToClean = signatureOutput.querySelectorAll('*');
     elementsToClean.forEach(element => {
         const inlineStyles = element.getAttribute('style');
         if (inlineStyles) {
-            // Filtrar y mantener solo los estilos no relacionados con Tailwind CSS
             const cleanedStyles = inlineStyles
                 .split(';')
                 .filter(style => !style.trim().startsWith('--tw-'))
@@ -319,7 +335,6 @@ function copySignature() {
         }
     });
 
-    // Seleccionar y copiar el contenido limpio
     const range = document.createRange();
     range.selectNode(signatureOutput);
     window.getSelection().removeAllRanges();
@@ -368,9 +383,9 @@ function adjustSize() {
     companyIndex == 0 ? imageFooter.width = 294 : imageFooter.width = 430;
 
     if (companyIndex == 1) {
-        logo.width = 108;
-        tdLogo.width = 120;
-        tdName.width = 520;
+        logo.width = 80;
+        tdLogo.width = 90;
+        tdName.width = 550;
     } else if (companyIndex == 2) {
         logo.width = 65;
         tdLogo.width = 75;
@@ -380,9 +395,9 @@ function adjustSize() {
         tdLogo.width = 60;
         tdName.width = 580;
     } else {
-        logo.width = 47;
-        tdLogo.width = 57;
-        tdName.width = 583;
+        logo.width = 43;
+        tdLogo.width = 53;
+        tdName.width = 587;
     }
 }
 
