@@ -373,9 +373,9 @@ function goToTop() {
 
 function adjustSize() {
 
-    const tdLogo = document.querySelector("td[width='57']");
-    const logo = document.querySelector("img[width='47']");
-    const tdName = document.querySelector("td[width='583']");
+    const tdLogo = document.querySelector("td[width='53']");
+    const logo = document.querySelector("img[width='43']");
+    const tdName = document.querySelector("td[width='587']");
     const imageFooter = document.querySelector("img[width='430']");
 
     const companyIndex = [...document.getElementsByName('company')].findIndex(radio => radio.checked);
