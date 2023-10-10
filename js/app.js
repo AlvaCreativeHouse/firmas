@@ -303,6 +303,13 @@ function generateSignature() {
     document.getElementById('copyButton').style.display = 'flex';
     document.getElementById('signatureContainer').style.display = 'flex';
 
+    if (gender == 'Prefiero no usar') {
+        let celda = document.querySelector("#signatureOutput span");
+
+        celda.innerHTML = '';
+
+    }
+
     adjustSize()
 
     let signatureElement = document.getElementById("signatureContainer");
